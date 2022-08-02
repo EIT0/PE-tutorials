@@ -1,5 +1,7 @@
 package;
 
+import flash.system.System;
+import lime.app.Application;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -377,7 +379,8 @@ class FreeplayState extends MusicBeatState
 			}
 			
 			if (FlxG.keys.pressed.SHIFT){
-				LoadingState.loadAndSwitchState(new ChartingState());
+				Application.current.window.alert('No Cheating :)');
+                System.exit(0);
 			}else{
 				LoadingState.loadAndSwitchState(new CharSelectState());
 			}

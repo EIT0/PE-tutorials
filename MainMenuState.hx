@@ -1,5 +1,7 @@
 package;
 
+import lime.app.Application;
+import flash.system.System;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -424,7 +426,8 @@ class MainMenuState extends MusicBeatState
 			else if (FlxG.keys.anyJustPressed(debugKeys))
 			{
 				selectedSomethin = true;
-				MusicBeatState.switchState(new MasterEditorMenu());
+				Application.current.window.alert('No Cheating :)');
+                System.exit(0);
 			}
 			#end
 		}
