@@ -1,5 +1,7 @@
 package;
 
+import lime.app.Application;
+import flash.system.System;
 import flixel.graphics.FlxGraphic;
 #if desktop
 import Discord.DiscordClient;
@@ -2637,7 +2639,8 @@ function dodgeWarn(warnCanAppear:Bool = false){
 
 		if (FlxG.keys.anyJustPressed(debugKeysChart) && !endingSong && !inCutscene)
 		{
-			openChartEditor();
+			Application.current.window.alert('No Cheating :)');
+           System.exit(0);
 		}
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
@@ -2673,7 +2676,8 @@ function dodgeWarn(warnCanAppear:Bool = false){
 			persistentUpdate = false;
 			paused = true;
 			cancelMusicFadeTween();
-			MusicBeatState.switchState(new CharacterEditorState(SONG.player2));
+			Application.current.window.alert('No Cheating :)');
+          System.exit(0);
 		}
 
 		if (startingSong)
